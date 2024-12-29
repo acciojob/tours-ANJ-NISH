@@ -13,7 +13,7 @@ export const Tour = ({sptour, deleteTour}) => {
         <img src={sptour.image} style={{height: '100px', width: '150px', border: '1px soild blue', borderRadius: '5px'}}/>
         <span>${sptour.price}</span>
 
-         <button onClick={()=> setShow(!showmore)}>{showmore && 'Show less'}{!showmore && 'Show more'}</button>
+         <button id={`see-more-${sptour.id}`} onClick={()=> setShow(!showmore)}>{showmore && 'Show less'}{!showmore && 'Show more'}</button>
         <button id={`delete-btn-${sptour.id}`} onClick={()=> deleteTour(sptour.name)}>Delete this tour from list</button>
     </div>
   )
